@@ -2,8 +2,6 @@ services:
   - type: web
     name: rails-backend
     env: ruby
-    plan: free
-    region: oregon
     buildCommand: bundle install
     startCommand: bundle exec puma -C config/puma.rb
     envVars:
@@ -11,11 +9,12 @@ services:
         value: production
       - key: DATABASE_URL
         fromDatabase:
-          name: rails-db
-          property: connectionString
+            name: rails-db
+            property: connectionString
       - key: SECRET_KEY_BASE
         generateValue: true
+      - key: RAILS_MASTER_KEY
+        value: bef1acebe8b98bd22b2deae2ac171206
 
 databases:
   - name: rails-db
-    plan: free
