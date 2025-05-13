@@ -14,7 +14,7 @@ services:
       - key: SECRET_KEY_BASE
         generateValue: true
       - key: RAILS_MASTER_KEY
-        value: bef1acebe8b98bd22b2deae2ac171206
+        value: your-master-key-here
 
 databases:
   - name: rails-db
