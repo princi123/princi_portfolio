@@ -2,10 +2,7 @@ services:
   - type: web
     name: rails-backend
     env: ruby
-    buildCommand: |
-      gem update --system 3.3.22
-      bundle install
-      bundle exec bootsnap precompile --gemfile
+    buildCommand: bundle install
     startCommand: bin/rails server
     envVars:
       - key: RAILS_ENV
