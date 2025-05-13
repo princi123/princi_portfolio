@@ -3,7 +3,7 @@ services:
     name: rails-backend
     env: ruby
     buildCommand: bundle install
-    startCommand: bundle exec rails server
+    startCommand: bundle exec rails server -b 0.0.0.0 -p 3000
     envVars:
       - key: RAILS_ENV
         value: production
