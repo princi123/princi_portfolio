@@ -77,8 +77,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: princi_portfolio_production
-  username: princi_portfolio
-  password: <%= ENV["PRINCI_PORTFOLIO_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
