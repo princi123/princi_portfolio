@@ -30,6 +30,8 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
     npm install -g yarn@$YARN_VERSION && \
     rm -rf /tmp/node-build-master
 
+RUN gem update --system 3.3.22
+
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
