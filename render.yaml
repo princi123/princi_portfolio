@@ -2,8 +2,11 @@ services:
   - type: web
     name: rails-backend
     env: ruby
-    buildCommand: bundle install
-    startCommand: bundle exec puma -C config/puma.rb
+    buildCommand: |
+      gem update --system 3.3.22
+      bundle install
+      bundle exec bootsnap precompile --gemfile
+    startCommand: bin/rails server
     envVars:
       - key: RAILS_ENV
         value: production
