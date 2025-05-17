@@ -66,3 +66,5 @@ group :development do
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
   gem 'letter_opener'
 end
+
+gem "dockerfile-rails", ">= 1.7", group: :development

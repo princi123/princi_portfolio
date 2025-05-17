@@ -11,7 +11,7 @@ const Right = () => {
       />
       {/* Overlay content on the code image */}
       <div className="code-overlay position-absolute top-50 start-50 translate-middle text-center text-light p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius: '10px' }}>
-        <h3 className="fw-bold">React + Ruby on Rails</h3>
+        <h3 className="fw-bold">React + TypeScript</h3>
         <p className="mb-0">Building powerful web apps with modern technologies.</p>
       </div>
     </div>
